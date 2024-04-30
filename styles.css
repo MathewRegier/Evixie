@@ -1,0 +1,229 @@
+/* General Reset and Basic Styles */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Navbar Styling */
+.navbar {
+    background-color: #333;
+    color: white;
+}
+
+.nav-link {
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #ff7f50; /* Brand highlight color */
+}
+
+/* Hero Section Styles */
+.hero {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/HeroHeader.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed; /* Enhanced parallax effect */
+    height: 100vh;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Button Enhancements */
+.btn-main {
+    background-color: #ff7f50; /* A bright, attention-grabbing color */
+    color: white;
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    border: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-main:hover {
+    background-color: #e67350; /* Slightly darker shade on hover */
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Feature Cards Styling */
+
+.features {
+    background-color: #f4f4f4;
+}
+
+.feature-card {
+    opacity: 0.8;
+    transform: scale(0.98);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
+    background: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.feature-card:hover, .feature-card:active {
+    transform: scale(1);
+    opacity: 1;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.feature-icon {
+    width: 60px; /* Adjust as needed */
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.card-title {
+    color: #333;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.card-text {
+    color: #666;
+    font-size: 1rem;
+}
+
+/* About Section Styling */
+.about {
+    background-color: #E8C547;
+    color: #333;
+    animation: fadeInUp 1s ease-out forwards;
+    animation-delay: 0.5s;  /* Ensures animation plays on load */
+}
+
+.about h2 {
+    color: #1446A0;
+    margin-bottom: 0.5em;
+}
+
+.about p {
+    margin-bottom: 1em;
+    font-size: 1.1em;
+}
+
+.about a.btn {
+    font-weight: bold;
+    padding: 0.75em 1.5em;
+}
+
+.about-image-wrapper {
+    position: relative;
+    text-align: center;
+}
+
+.about-pattern {
+    max-width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+}
+
+/* Footer Styling */
+footer {
+    border-top: 1px solid #aaa;
+    text-align: center;
+    padding: 10px 0;
+    background-color: #000;
+    color: #fff;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 991px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 767px) {
+    .hero, .features, .about, .statistics {
+        text-align: center;
+    }
+}
+
+@media (max-width: 575px) {
+    .navbar-nav .nav-link {
+        font-size: 0.9rem;
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translate3d(0, -100%, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translate3d(0, 100%, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.animated {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+.fadeInDown {
+    animation-name: fadeInDown;
+}
+
+.fadeInUp {
+    animation-name: fadeInUp;
+}
+
+.delay-1s {
+    animation-delay: 1s;
+}
+
+.statistics {
+    color: #333;
+}
+
+.stat-card {
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.stat-title {
+    font-size: 1.5rem;
+    color: #555;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #1446A0;
+}
+
+.card-text {
+    font-size: 1rem;
+    color: #666;
+}
+
+.stat-disclaimer {
+    color: #666;
+    font-size: 0.9rem;
+    margin-top: 20px;
+    font-style: italic;
+}
