@@ -3,13 +3,22 @@ html, body {
     height: 100%;
     margin: 0;
     padding: 0;
+    font-family: 'Roboto', sans-serif;
 }
 
-/* Sticky Navbar */
-.header, .navbar {
-    position: sticky;
-    top: 0;
-    z-index: 10;
+/* Navbar Styling */
+.navbar {
+    background-color: #333;
+    color: white;
+}
+
+.nav-link {
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #ff7f50; /* Brand highlight color */
 }
 
 /* Hero Section Styles */
@@ -18,7 +27,7 @@ html, body {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
-    background-attachment: fixed; /* Optional: for parallax effect */
+    background-attachment: fixed; /* Enhanced parallax effect */
     height: 100vh;
     text-align: center;
     display: flex;
@@ -43,14 +52,23 @@ html, body {
 }
 
 /* Feature Cards Styling */
-.feature-card {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    cursor: pointer;
+
+.features {
+    background-color: #f4f4f4;
 }
 
-.feature-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+.feature-card {
+    opacity: 0.8;
+    transform: scale(0.98);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
+    background: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.feature-card:hover, .feature-card:active {
+    transform: scale(1);
+    opacity: 1;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
 .feature-icon {
@@ -73,7 +91,9 @@ html, body {
 /* About Section Styling */
 .about {
     background-color: #E8C547;
-    color: #000505;
+    color: #333;
+    animation: fadeInUp 1s ease-out forwards;
+    animation-delay: 0.5s;  /* Ensures animation plays on load */
 }
 
 .about h2 {
@@ -102,15 +122,6 @@ html, body {
     border-radius: 0.5rem;
 }
 
-.about-logo {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    max-width: 60%;
-    height: auto;
-}
-
 /* Footer Styling */
 footer {
     border-top: 1px solid #aaa;
@@ -122,32 +133,20 @@ footer {
 
 /* Responsive Adjustments */
 @media (max-width: 991px) {
-    .about h2 {
-        font-size: 2.5rem;
-    }
-}
-
-@media (max-width: 767px) {
-    .about {
-        text-align: center;
-    }
-
-    .about-image-wrapper {
-        margin-top: 30px;
-    }
-
     .hero h1 {
         font-size: 2.5rem;
     }
 }
 
-@media (max-width: 575px) {
-    .about h2 {
-        font-size: 2rem;
+@media (max-width: 767px) {
+    .hero, .features, .about, .statistics {
+        text-align: center;
     }
+}
 
-    .about p {
-        font-size: 1em;
+@media (max-width: 575px) {
+    .navbar-nav .nav-link {
+        font-size: 0.9rem;
     }
 }
 
@@ -188,4 +187,43 @@ footer {
 
 .delay-1s {
     animation-delay: 1s;
+}
+
+.statistics {
+    color: #333;
+}
+
+.stat-card {
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.stat-title {
+    font-size: 1.5rem;
+    color: #555;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #1446A0;
+}
+
+.card-text {
+    font-size: 1rem;
+    color: #666;
+}
+
+.stat-disclaimer {
+    color: #666;
+    font-size: 0.9rem;
+    margin-top: 20px;
+    font-style: italic;
 }
