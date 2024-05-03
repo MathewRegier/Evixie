@@ -1,0 +1,191 @@
+/* General Reset and Basic Styles */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Navbar Styling */
+.navbar {
+    background-color: #333;
+    color: white;
+}
+
+.nav-link {
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #ff7f50; /* Brand highlight color */
+}
+
+/* Hero Section Styles */
+.hero {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/HeroHeader.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed; /* Enhanced parallax effect */
+    height: 100vh;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Button Enhancements */
+.btn-main {
+    background-color: #ff7f50; /* A bright, attention-grabbing color */
+    color: white;
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    border: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-main:hover {
+    background-color: #e67350; /* Slightly darker shade on hover */
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Image Carousel Styles */
+.carousel-inner img {
+    width: 100%;
+    height: 500px; /* Set height or make it responsive */
+}
+
+/* Detailed Text Section Styles */
+.text-section {
+    background-color: #f4f4f4;
+    padding: 50px 0;
+    color: #333;
+}
+
+.text-section h2 {
+    color: #ff7f50;
+}
+
+.text-section p {
+    font-size: 1.1em;
+    color: #666;
+}
+
+/* Half Photo, Half Text Section */
+.half-photo-half-text {
+    background-color: #1446A0;
+    padding: 50px 0;
+    color: white;
+}
+
+.half-photo-half-text h2 {
+    margin-bottom: 20px;
+}
+
+.half-photo-half-text p {
+    font-size: 1.1em;
+}
+
+.half-photo-half-text img {
+    max-width: 100%;
+    height: auto;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Footer Styling */
+footer {
+    border-top: 1px solid #aaa;
+    text-align: center;
+    padding: 10px 0;
+    background-color: #000;
+    color: #fff;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 991px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 767px) {
+    .hero, .features, .about, .statistics, .text-section, .half-photo-half-text {
+        text-align: center;
+    }
+}
+
+@media (max-width: 575px) {
+    .navbar-nav .nav-link {
+        font-size: 0.9rem;
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translate3d(0, -100%, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translate3d(0, 100%, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.animated {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+.fadeInDown {
+    animation-name: fadeInDown;
+}
+
+.fadeInUp {
+    animation-name: fadeInUp;
+}
+
+.delay-1s {
+    animation-delay: 1s;
+}
+
+/* Photo Grid Styling */
+.photo-grid .img-fluid {
+    width: 100%;
+    height: auto;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.photo-grid .img-fluid:hover {
+    transform: scale(1.05);
+}
+
+/* General Section Styling */
+section {
+    padding: 60px 0;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.bg-light {
+    background-color: #f4f4f4;
+}
+
+.text-white {
+    color: #fff;
+}
