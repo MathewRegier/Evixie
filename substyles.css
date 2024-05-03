@@ -51,75 +51,47 @@ html, body {
     box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
-/* Feature Cards Styling */
+/* Image Carousel Styles */
+.carousel-inner img {
+    width: 100%;
+    height: 500px; /* Set height or make it responsive */
+}
 
-.features {
+/* Detailed Text Section Styles */
+.text-section {
     background-color: #f4f4f4;
-}
-
-.feature-card {
-    opacity: 0.8;
-    transform: scale(0.98);
-    transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
-    background: white;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-.feature-card:hover, .feature-card:active {
-    transform: scale(1);
-    opacity: 1;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-}
-
-.feature-icon {
-    width: 60px; /* Adjust as needed */
-    height: auto;
-    margin-bottom: 15px;
-}
-
-.card-title {
+    padding: 50px 0;
     color: #333;
-    font-size: 1.25rem;
-    font-weight: bold;
 }
 
-.card-text {
+.text-section h2 {
+    color: #ff7f50;
+}
+
+.text-section p {
+    font-size: 1.1em;
     color: #666;
-    font-size: 1rem;
 }
 
-/* About Section Styling */
-.about {
-    background-color: #E8C547;
-    color: #333;
-    animation: fadeInUp 1s ease-out forwards;
-    animation-delay: 0.5s;  /* Ensures animation plays on load */
+/* Half Photo, Half Text Section */
+.half-photo-half-text {
+    background-color: #1446A0;
+    padding: 50px 0;
+    color: white;
 }
 
-.about h2 {
-    color: #1446A0;
-    margin-bottom: 0.5em;
+.half-photo-half-text h2 {
+    margin-bottom: 20px;
 }
 
-.about p {
-    margin-bottom: 1em;
+.half-photo-half-text p {
     font-size: 1.1em;
 }
 
-.about a.btn {
-    font-weight: bold;
-    padding: 0.75em 1.5em;
-}
-
-.about-image-wrapper {
-    position: relative;
-    text-align: center;
-}
-
-.about-pattern {
+.half-photo-half-text img {
     max-width: 100%;
     height: auto;
-    border-radius: 0.5rem;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
 /* Footer Styling */
@@ -139,7 +111,7 @@ footer {
 }
 
 @media (max-width: 767px) {
-    .hero, .features, .about, .statistics {
+    .hero, .features, .about, .statistics, .text-section, .half-photo-half-text {
         text-align: center;
     }
 }
@@ -189,43 +161,33 @@ footer {
     animation-delay: 1s;
 }
 
-.statistics {
-    color: #333;
+/* Photo Grid Styling */
+.photo-grid .img-fluid {
+    width: 100%;
+    height: auto;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
 }
 
-.stat-card {
-    padding: 20px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+.photo-grid .img-fluid:hover {
+    transform: scale(1.05);
 }
 
-.stat-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+/* General Section Styling */
+section {
+    padding: 60px 0;
 }
 
-.stat-title {
-    font-size: 1.5rem;
-    color: #555;
-    margin-top: 10px;
-    margin-bottom: 5px;
+.text-center {
+    text-align: center;
 }
 
-.stat-number {
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: #1446A0;
+.bg-light {
+    background-color: #f4f4f4;
 }
 
-.card-text {
-    font-size: 1rem;
-    color: #666;
-}
-
-.stat-disclaimer {
-    color: #666;
-    font-size: 0.9rem;
-    margin-top: 20px;
-    font-style: italic;
+.text-white {
+    color: #fff;
 }
 
 /* Footer Styling */
