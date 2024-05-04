@@ -161,18 +161,23 @@ footer {
     animation-delay: 1s;
 }
 
-/* Photo Grid Styling */
+/* Photo Grid Specific Styling */
 .photo-grid .img-fluid {
-    width: 100%;
-    height: auto;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease;
+    height: 200px; /* Ensuring all images in the grid are of the same height */
+    object-fit: cover; /* Cover the area of the div without distorting aspect ratio */
 }
 
-.photo-grid .img-fluid:hover {
-    transform: scale(1.05);
+/* Specific to the photo grid images */
+.photo-grid .grid-image {
+    height: 200px; /* Fixed height for all images in the grid */
+    object-fit: cover; /* Ensures images cover the div without distortion */
+    width: 100%; /* Ensures width is responsive and fills the column */
+    transition: transform 0.3s ease; /* Smooth transformation on hover */
 }
 
+.photo-grid .grid-image:hover {
+    transform: scale(1.05); /* Slight enlargement on hover */
+}
 /* General Section Styling */
 section {
     padding: 60px 0;
@@ -233,4 +238,62 @@ footer .text-center {
     footer .col-md-4 {
         margin-bottom: 20px;
     }
+}
+
+/* Counter Styles */
+.email-count {
+    font-size: 2rem; /* Larger font size for visibility */
+    font-weight: bold; /* Bold font for emphasis */
+    color: #ffcc00; /* Bright color for attractiveness */
+    margin-top: 20px; /* Space above the counter */
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.6); /* Shadow for depth */
+}
+
+.email-counter-value {
+    color: #ffffff; /* White color for the number to stand out */
+    font-size: 2.5rem; /* Even larger size for the number itself */
+}
+
+.email-stats {
+    background-color: #f8f9fa;
+    padding: 50px 0;
+}
+
+.email-stats {
+    background-color: #f8f9fa;
+    padding: 50px 0;
+}
+
+.stat-value {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.stat-label {
+    font-size: 1.2rem;
+    color: #666;
+    margin-top: 10px;
+}
+
+.case-study-card {
+    background: #fff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 8px;
+}
+
+.case-study-card h4 {
+    color: #333;
+    font-weight: bold;
+}
+
+.case-study-card p {
+    font-size: 1rem;
+    color: #666;
+}
+
+.email-stats .btn-primary {
+    margin-top: 20px;
 }

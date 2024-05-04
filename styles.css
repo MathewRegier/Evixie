@@ -272,3 +272,19 @@ footer .text-center {
         margin-bottom: 20px;
     }
 }
+
+.feature-btn {
+    margin-top: 10px;
+    color: #ffffff; /* White text color */
+    background-color: #007bff; /* Bootstrap primary color */
+    border-radius: 5px; /* Rounded corners */
+    border: none; /* No border */
+    padding: 8px 16px; /* Padding for a larger clickable area */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.feature-btn:hover, .feature-btn:focus {
+    background-color: #0056b3; /* Darker blue on hover/focus */
+    color: #ffffff; /* Keep text color white */
+    text-decoration: none; /* No underline on hover */
+}
