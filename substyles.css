@@ -4,6 +4,8 @@ html, body {
     margin: 0;
     padding: 0;
     font-family: 'Roboto', sans-serif;
+    justify-content: center;
+    align-items: center;
 }
 
 /* Navbar Styling */
@@ -23,18 +25,19 @@ html, body {
 
 /* Hero Section Styles */
 .hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;  /* Centers content vertically */
+    align-items: center;  /* Centers content horizontally */
+    height: 100vh;
+    width: 100vw;  /* Covers the full view width */
+    text-align: center;
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/HeroHeader.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
-    background-attachment: fixed; /* Enhanced parallax effect */
-    height: 100vh;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    background-attachment: fixed;
 }
-
 /* Button Enhancements */
 .btn-main {
     background-color: #ff7f50; /* A bright, attention-grabbing color */
@@ -296,4 +299,80 @@ footer .text-center {
 
 .email-stats .btn-primary {
     margin-top: 20px;
+}
+
+.container-fluid {
+    width: 100%;  /* Ensure it takes full width */
+    display: flex;  /* Flex display */
+    flex-direction: column;  /* Stack children vertically */
+    align-items: center;  /* Center-align children horizontally */
+    justify-content: center;  /* Center-align children vertically */
+}
+
+.call-demo-form-container {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 400px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.form-control, .btn-primary {
+    border-radius: 30px;
+    height: 45px;
+    margin-bottom: 10px;
+}
+
+.form-control {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: none;
+}
+
+.btn-ai-demo {
+    width: 100%;
+    font-weight: bold;
+    background-image: linear-gradient(to right, #0062E6, #33AEFF);
+}
+
+.btn-primary {
+    color: #ffffff; /* Ensures text color is white for better readability */
+    background-color: #007bff; /* Primary color for your brand */
+    border-color: #007bff; /* Border color matches the background */
+    padding: 10px 20px; /* Adequate padding for button size */
+    font-size: 16px; /* Optimal font size for visibility */
+    border-radius: 5px; /* Rounded corners for a modern look */
+    transition: background-color 0.2s ease, box-shadow 0.2s ease; /* Smooth transition for hover effects */
+
+    display: inline-block; /* Ensures the button is only as wide as its content */
+    text-align: center; /* Centers text within the button */
+    vertical-align: middle; /* Aligns button text vertically */
+    user-select: none; /* Prevents text selection */
+    border: 1px solid transparent; /* Maintains structure while hiding the border */
+
+    /* Adding touch feedback and visual responsiveness */
+    cursor: pointer;
+    outline: none;
+}
+
+.btn-primary:hover, .btn-primary:focus {
+    background-color: #0056b3; /* Darker shade on hover/focus for depth effect */
+    border-color: #0056b3; /* Border color changes with background */
+    box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.5); /* Glowing effect on focus */
+}
+
+.btn-primary:active {
+    background-color: #004885; /* Even darker for the active state */
+    box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125); /* Inner shadow to simulate depression */
+}
+
+.btn-primary:disabled {
+    background-color: #007bff; /* Keeps background color consistent */
+    opacity: 0.65; /* Slightly transparent when disabled */
+    cursor: not-allowed; /* Indicates the button is inactive */
+}
+
+/* Placeholder */
+::placeholder {
+    color: #000;
+    opacity: 0.5;
 }
